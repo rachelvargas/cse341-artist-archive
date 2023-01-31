@@ -31,7 +31,7 @@
   "paths": {
     "/artists/": {
       "get": {
-        "description": "Get all artists",
+        "description": "Get all Artists",
         "tags": ["Artists"],
         "produces": [
           "application/json"
@@ -44,7 +44,7 @@
         }
       },
       "post": {
-        "description": "Create new artist",
+        "description": "Create new Artist",
         "tags": ["Artists"],
         "produces": [
           "application/json"
@@ -59,7 +59,7 @@
     },
     "/artists/{id}": {
       "get": {
-        "description": "Get artist by ID",
+        "description": "Get an Artist by ID",
         "tags": ["Artists"],
         "produces": [
           "application/json"
