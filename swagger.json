@@ -1,0 +1,393 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Artist Archive",
+    "description": "Team 3 - API project for CSE341",
+    "version": "1.0.0"
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "tags": [
+    {
+      "name": "Artists",
+      "description": "Operations about Artists" 
+    },
+    {
+      "name": "Showtimes",
+      "description": "Operations about Showtimes" 
+    },
+    {
+      "name": "Artworks",
+      "description": "Operations about Artworks" 
+    },
+    {
+      "name": "Metrics",
+      "description": "Operations about Metrics" 
+    }
+  ],
+  "paths": {
+    "/artists/": {
+      "get": {
+        "description": "Get all artists",
+        "tags": ["Artists"],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "Create new artist",
+        "tags": ["Artists"],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/artists/{id}": {
+      "get": {
+        "description": "Get artist by ID",
+        "tags": ["Artists"],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "description": "Edit an Artist's info by ID",
+        "tags": ["Artists"],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "description": "Delete an Artist by ID",
+        "tags": ["Artists"],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/showtimes/": {
+      "get": {
+        "description": "Get all Showtimes",
+        "tags": ["Showtimes"],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "Create a Showtime",
+        "tags": ["Showtimes"],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/showtimes/{id}": {
+      "get": {
+        "description": "Get a Showtime by ID",
+        "tags": ["Showtimes"],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "description": "Edit a Showtime by ID",
+        "tags": ["Showtimes"],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "description": "Delete a Showtime by ID",
+        "tags": ["Showtimes"],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/artworks/": {
+      "get": {
+        "description": "Get all Artworks",
+        "tags": ["Artworks"],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "Create an Artwork",
+        "tags": ["Artworks"],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/artworks/{id}": {
+      "get": {
+        "description": "Get an Artwork by ID",
+        "tags": ["Artworks"],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "description": "Edit an Artwork by ID",
+        "tags": ["Artworks"],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "description": "Delete an Artwork by ID",
+        "tags": ["Artworks"],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/metrics/": {
+      "get": {
+        "description": "Get all Metrics",
+        "tags": ["Metrics"],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "Create a Metric",
+        "tags": ["Metrics"],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/metrics/{id}": {
+      "get": {
+        "description": "Get a Metric By ID",
+        "tags": ["Metrics"],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "description": "Edit a Metric By ID",
+        "tags": ["Metrics"],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "description": "Delete a Metric By ID",
+        "tags": ["Metrics"],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  }
+}
