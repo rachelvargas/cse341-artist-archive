@@ -5,7 +5,7 @@ const metrics = require('../controllers/metrics');
 
 // GET ALL METRICS
 router.get('/', (req, res) => {
-    res.send('Hey, this is the metrics.js route');
+    res.send('Hey, this is the metrics.js GET route');
 });
 
 // CREATE NEW METRIC
@@ -16,7 +16,7 @@ router.post('/', (req, res) => {
 // GET, PUT, DELETE BY ID ROUTES
 router.route('/:id')
 .get((req, res) => {
-    res.send('Hey, this is the metrics.js POST route');
+    res.send('Hey, this is the metrics.js GET BY ID route');
 })
 .put((req, res) => {
     res.send('Hey, this is the metrics.js PUT route');

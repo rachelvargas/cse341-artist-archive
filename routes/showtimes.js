@@ -5,7 +5,7 @@ const showtimes = require('../controllers/showtimes');
 
 // GET ALL SHOWTIMES
 router.get('/', (req, res) => {
-    res.send('Hey, this is the showtimes.js route');
+    res.send('Hey, this is the showtimes.js GET route');
 });
 
 // CREATE NEW SHOWTIME
@@ -16,7 +16,7 @@ router.post('/', (req, res) => {
 // GET, PUT, DELETE BY ID ROUTES
 router.route('/:id')
 .get((req, res) => {
-    res.send('Hey, this is the showtimes.js POST route');
+    res.send('Hey, this is the showtimes.js GET BY ID route');
 })
 .put((req, res) => {
     res.send('Hey, this is the showtimes.js PUT route');
