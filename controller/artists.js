@@ -1,1 +1,0 @@
-// Controller for the artists collection
