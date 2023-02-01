@@ -31,8 +31,9 @@
   "paths": {
     "/artists/": {
       "get": {
-        "description": "Get all Artists",
+        "description": "Get all Artists in the system",
         "tags": ["Artists"],
+        "summary": "Get all Artists",
         "produces": [
           "application/json"
         ],
@@ -44,8 +45,9 @@
         }
       },
       "post": {
-        "description": "Create new Artist",
+        "description": "Create a new Artis in the system",
         "tags": ["Artists"],
+        "summary": "Create a new Artist",
         "produces": [
           "application/json"
         ],
@@ -61,6 +63,7 @@
       "get": {
         "description": "Get an Artist by ID",
         "tags": ["Artists"],
+        "summary": "Get an Artist by ID",
         "produces": [
           "application/json"
         ],
@@ -81,6 +84,7 @@
       "put": {
         "description": "Edit an Artist's info by ID",
         "tags": ["Artists"],
+        "summary": "Edit an Artist's info by ID",
         "produces": [
           "application/json"
         ],
@@ -101,6 +105,7 @@
       "delete": {
         "description": "Delete an Artist by ID",
         "tags": ["Artists"],
+        "summary": "Delete an Artist by ID",
         "produces": [
           "application/json"
         ],
@@ -123,6 +128,7 @@
       "get": {
         "description": "Get all Showtimes",
         "tags": ["Showtimes"],
+        "summary": "Get all Showtimes",
         "produces": [
           "application/json"
         ],
@@ -136,6 +142,7 @@
       "post": {
         "description": "Create a Showtime",
         "tags": ["Showtimes"],
+        "summary": "Create a Showtime",
         "produces": [
           "application/json"
         ],
@@ -151,6 +158,7 @@
       "get": {
         "description": "Get a Showtime by ID",
         "tags": ["Showtimes"],
+        "summary": "Get a Showtime by ID",
         "produces": [
           "application/json"
         ],
@@ -171,6 +179,7 @@
       "put": {
         "description": "Edit a Showtime by ID",
         "tags": ["Showtimes"],
+        "summary": "Edit a Showtime by ID",
         "produces": [
           "application/json"
         ],
@@ -191,6 +200,7 @@
       "delete": {
         "description": "Delete a Showtime by ID",
         "tags": ["Showtimes"],
+        "summary": "Delete a Showtime by ID",
         "produces": [
           "application/json"
         ],
@@ -213,6 +223,7 @@
       "get": {
         "description": "Get all Artworks",
         "tags": ["Artworks"],
+        "summary": "Get all Artworks",
         "produces": [
           "application/json"
         ],
@@ -226,6 +237,7 @@
       "post": {
         "description": "Create an Artwork",
         "tags": ["Artworks"],
+        "summary": "Create an Artwork",
         "produces": [
           "application/json"
         ],
@@ -241,6 +253,7 @@
       "get": {
         "description": "Get an Artwork by ID",
         "tags": ["Artworks"],
+        "summary": "Get an Artwork by ID",
         "produces": [
           "application/json"
         ],
@@ -261,6 +274,7 @@
       "put": {
         "description": "Edit an Artwork by ID",
         "tags": ["Artworks"],
+        "summary": "Edit an Artwork by ID",
         "produces": [
           "application/json"
         ],
@@ -281,6 +295,7 @@
       "delete": {
         "description": "Delete an Artwork by ID",
         "tags": ["Artworks"],
+        "summary": "Delete an Artwork by ID",
         "produces": [
           "application/json"
         ],
@@ -303,6 +318,7 @@
       "get": {
         "description": "Get all Metrics",
         "tags": ["Metrics"],
+        "summary": "Get all Metrics",
         "produces": [
           "application/json"
         ],
@@ -316,6 +332,7 @@
       "post": {
         "description": "Create a Metric",
         "tags": ["Metrics"],
+        "summary": "Create a Metric",
         "produces": [
           "application/json"
         ],
@@ -331,6 +348,7 @@
       "get": {
         "description": "Get a Metric By ID",
         "tags": ["Metrics"],
+        "summary": "Get a Metric By ID",
         "produces": [
           "application/json"
         ],
@@ -351,6 +369,7 @@
       "put": {
         "description": "Edit a Metric By ID",
         "tags": ["Metrics"],
+        "summary": "Edit a Metric By ID",
         "produces": [
           "application/json"
         ],
@@ -371,6 +390,7 @@
       "delete": {
         "description": "Delete a Metric By ID",
         "tags": ["Metrics"],
+        "summary": "Delete a Metric By ID",
         "produces": [
           "application/json"
         ],
