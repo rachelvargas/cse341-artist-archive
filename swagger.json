@@ -5,7 +5,7 @@
     "description": "Team 3 - API project for CSE341",
     "version": "1.0.0"
   },
-  "host": "artist-archive.onrender.com/",
+  "host": "artist-archive.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
