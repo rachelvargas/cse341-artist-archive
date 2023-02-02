@@ -4,9 +4,7 @@ const router = express.Router();
 const artworks = require('../controllers/artworks');
 
 // GET ALL ARTWORKS
-router.get('/', (req, res) => {
-    res.send('Hey, this is the artworks.js GET route');
-});
+router.get('/', artworks.getDB);
 
 // CREATE NEW ARTWORK
 router.post('/', (req, res) => {
