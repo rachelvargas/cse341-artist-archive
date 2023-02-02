@@ -10,32 +10,28 @@
   "schemes": [
     "https"
   ],
-  "tags": [
-    {
-      "name": "Artists",
-      "description": "Operations about Artists" 
-    },
-    {
-      "name": "Showtimes",
-      "description": "Operations about Showtimes" 
-    },
-    {
-      "name": "Artworks",
-      "description": "Operations about Artworks" 
-    },
-    {
-      "name": "Metrics",
-      "description": "Operations about Metrics" 
-    }
-  ],
   "paths": {
+    "/": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api-docs": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    },
     "/artists/": {
       "get": {
-        "description": "Get all Artists",
-        "tags": ["Artists"],
-        "produces": [
-          "application/json"
-        ],
+        "description": "",
         "parameters": [],
         "responses": {
           "200": {
@@ -44,11 +40,7 @@
         }
       },
       "post": {
-        "description": "Create new Artist",
-        "tags": ["Artists"],
-        "produces": [
-          "application/json"
-        ],
+        "description": "",
         "parameters": [],
         "responses": {
           "200": {
@@ -59,11 +51,7 @@
     },
     "/artists/{id}": {
       "get": {
-        "description": "Get an Artist by ID",
-        "tags": ["Artists"],
-        "produces": [
-          "application/json"
-        ],
+        "description": "",
         "parameters": [
           {
             "name": "id",
@@ -79,11 +67,7 @@
         }
       },
       "put": {
-        "description": "Edit an Artist's info by ID",
-        "tags": ["Artists"],
-        "produces": [
-          "application/json"
-        ],
+        "description": "",
         "parameters": [
           {
             "name": "id",
@@ -99,11 +83,7 @@
         }
       },
       "delete": {
-        "description": "Delete an Artist by ID",
-        "tags": ["Artists"],
-        "produces": [
-          "application/json"
-        ],
+        "description": "",
         "parameters": [
           {
             "name": "id",
@@ -121,11 +101,7 @@
     },
     "/showtimes/": {
       "get": {
-        "description": "Get all Showtimes",
-        "tags": ["Showtimes"],
-        "produces": [
-          "application/json"
-        ],
+        "description": "",
         "parameters": [],
         "responses": {
           "200": {
@@ -134,11 +110,7 @@
         }
       },
       "post": {
-        "description": "Create a Showtime",
-        "tags": ["Showtimes"],
-        "produces": [
-          "application/json"
-        ],
+        "description": "",
         "parameters": [],
         "responses": {
           "200": {
@@ -149,11 +121,7 @@
     },
     "/showtimes/{id}": {
       "get": {
-        "description": "Get a Showtime by ID",
-        "tags": ["Showtimes"],
-        "produces": [
-          "application/json"
-        ],
+        "description": "",
         "parameters": [
           {
             "name": "id",
@@ -169,11 +137,7 @@
         }
       },
       "put": {
-        "description": "Edit a Showtime by ID",
-        "tags": ["Showtimes"],
-        "produces": [
-          "application/json"
-        ],
+        "description": "",
         "parameters": [
           {
             "name": "id",
@@ -189,11 +153,7 @@
         }
       },
       "delete": {
-        "description": "Delete a Showtime by ID",
-        "tags": ["Showtimes"],
-        "produces": [
-          "application/json"
-        ],
+        "description": "",
         "parameters": [
           {
             "name": "id",
@@ -211,8 +171,7 @@
     },
     "/artworks/": {
       "get": {
-        "description": "Get all Artworks",
-        "tags": ["Artworks"],
+        "description": "",
         "produces": [
           "application/json"
         ],
@@ -220,15 +179,17 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
       "post": {
-        "description": "Create an Artwork",
-        "tags": ["Artworks"],
-        "produces": [
-          "application/json"
-        ],
+        "description": "",
         "parameters": [],
         "responses": {
           "200": {
@@ -239,11 +200,7 @@
     },
     "/artworks/{id}": {
       "get": {
-        "description": "Get an Artwork by ID",
-        "tags": ["Artworks"],
-        "produces": [
-          "application/json"
-        ],
+        "description": "",
         "parameters": [
           {
             "name": "id",
@@ -259,11 +216,7 @@
         }
       },
       "put": {
-        "description": "Edit an Artwork by ID",
-        "tags": ["Artworks"],
-        "produces": [
-          "application/json"
-        ],
+        "description": "",
         "parameters": [
           {
             "name": "id",
@@ -279,11 +232,7 @@
         }
       },
       "delete": {
-        "description": "Delete an Artwork by ID",
-        "tags": ["Artworks"],
-        "produces": [
-          "application/json"
-        ],
+        "description": "",
         "parameters": [
           {
             "name": "id",
@@ -301,11 +250,7 @@
     },
     "/metrics/": {
       "get": {
-        "description": "Get all Metrics",
-        "tags": ["Metrics"],
-        "produces": [
-          "application/json"
-        ],
+        "description": "",
         "parameters": [],
         "responses": {
           "200": {
@@ -314,11 +259,7 @@
         }
       },
       "post": {
-        "description": "Create a Metric",
-        "tags": ["Metrics"],
-        "produces": [
-          "application/json"
-        ],
+        "description": "",
         "parameters": [],
         "responses": {
           "200": {
@@ -329,11 +270,7 @@
     },
     "/metrics/{id}": {
       "get": {
-        "description": "Get a Metric By ID",
-        "tags": ["Metrics"],
-        "produces": [
-          "application/json"
-        ],
+        "description": "",
         "parameters": [
           {
             "name": "id",
@@ -349,11 +286,7 @@
         }
       },
       "put": {
-        "description": "Edit a Metric By ID",
-        "tags": ["Metrics"],
-        "produces": [
-          "application/json"
-        ],
+        "description": "",
         "parameters": [
           {
             "name": "id",
@@ -369,11 +302,7 @@
         }
       },
       "delete": {
-        "description": "Delete a Metric By ID",
-        "tags": ["Metrics"],
-        "produces": [
-          "application/json"
-        ],
+        "description": "",
         "parameters": [
           {
             "name": "id",
