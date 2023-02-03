@@ -6,6 +6,7 @@ const getDB  = async (req, res) => {
   try {
     console.log("@controller");
     const allDB = await mongodb.getDatabase().db('artistarchive').collection('artworks').find();
+    console.log('@donemongodb');
     allDB.toArray((err, dbs) => {
       if (err) {
         console.log("@controlleriferr");
