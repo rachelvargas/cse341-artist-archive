@@ -4,6 +4,7 @@ const mongodb = require('../db/connect.js');
 
 const getDB  = async (req, res) => {
   try {
+    console.log("@controller");
     const allDB = await mongodb.getDatabase().db('artistarchive').collection('artworks').find();
     allDB.toArray((err, dbs) => {
       if (err) {
