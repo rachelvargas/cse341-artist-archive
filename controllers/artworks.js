@@ -18,4 +18,4 @@ const getDB  = async (req, res) => {
 
   };
 
-  module.exports = getDB;
+module.exports = {getDB};
