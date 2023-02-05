@@ -45,7 +45,7 @@
         }
       },
       "post": {
-        "description": "Create a new Artis in the system",
+        "description": "Create a new Artist in the database",
         "tags": ["Artists"],
         "summary": "Create a new Artist",
         "produces": [

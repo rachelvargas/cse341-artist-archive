@@ -60,7 +60,7 @@ const createDoc = async (req, res) => {
             lastName: 'Last Name',
             overallGenre: 'Genre',
             showing: '',
-            metrics: '',}
+            metrics: ''}
         );
         res.status(201).json(result);   
       } catch (err){
