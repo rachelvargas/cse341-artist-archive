@@ -50,7 +50,26 @@ const userId = new ObjId(req.params.id);
 }
 };
 
+const createDoc = async (req, res) => {
+    try{
+        const result = await mongodb
+        .getDatabase()
+        .db('artistarchive')
+        .collection('artists').insertOne(
+            {firstName: 'Artist Name',
+            lastName: 'Last Name',
+            overallGenre: 'Genre',
+            showing: '',
+            metrics: '',}
+        );
+        res.status(201).json(result);   
+      } catch (err){
+        res.status(400).json({ message: err.message });
+      }
+    };
+  
+
 module.exports = {
-    getData, getDocById
-    // createDoc, updateDoc, removeDoc
+    getData, getDocById, createDoc
+    //updateDoc, removeDoc
 };
