@@ -7,9 +7,7 @@ const artists = require('../controllers/artists');
 router.get('/', artists.getData);
 
 // CREATE NEW ARTIST
-router.post('/', (req, res) => {
-    res.send('Hey, this is the artists.js POST route');
-});
+router.post('/', artists.createDoc);
 
 // GET, PUT, DELETE BY ID ROUTES
 router.route('/:id')

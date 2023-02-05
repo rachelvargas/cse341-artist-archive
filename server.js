@@ -5,8 +5,6 @@ const conDB = require('./db/connect.js');
 require('dotenv').config();
 const port = process.env.PORT || 3000;
 
-
-conDB.connectDB();
 app
   .use(cors())
   .use(express.json())
@@ -22,6 +20,8 @@ app
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
     next();
   })
+
+conDB.connectDB();
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
