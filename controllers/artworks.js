@@ -29,7 +29,7 @@ const getArtwork = async (req, res) => {
     oneDB.toArray.then((dbs) => {
       if (dbs){
         res.setHeader('Content-Type', 'application/json');
-        res.status(200).json(dbs);
+        res.status(200).json(dbs[0]);
       } else {
         res.status(400).json(oneDB.error || 'An error has occured');
       }
