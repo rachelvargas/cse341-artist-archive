@@ -2,22 +2,17 @@
 const express = require('express');
 const router = express.Router();
 const artists = require('../controllers/artists');
+const validation = require('../middleware/validation');
 
 // GET ALL ARTISTS
-router.get('/', (req, res) => {
-    res.send('Hey, this is the artists.js GET route');
-});
+router.get('/', artists.getData);
 
 // CREATE NEW ARTIST
-router.post('/', (req, res) => {
-    res.send('Hey, this is the artists.js POST route');
-});
+router.post('/', validation.saveArtist, artists.createDoc);
 
 // GET, PUT, DELETE BY ID ROUTES
 router.route('/:id')
-.get((req, res) => {
-    res.send('Hey, this is the artists.js GET BY ID route');
-})
+.get(artists.getDocById)
 .put((req, res) => {
     res.send('Hey, this is the artists.js PUT route');
 })

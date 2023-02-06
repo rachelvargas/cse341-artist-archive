@@ -24,11 +24,12 @@
     "audit": "^0.0.6",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "fix": "^0.0.6",
+    "fix": "^0.0.3",
     "mongodb": "^5.0.0",
     "nodemon": "^2.0.20",
-    "swagger": "^0.7.5",
-    "validatejs": "^0.0.2"
+    "swagger": "^0.0.1",
+    "validatejs": "^0.0.2",
+    "validatorjs": "^3.22.1"
   },
   "devDependencies": {
     "swagger-autogen": "^2.23.0",

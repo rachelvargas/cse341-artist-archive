@@ -7,10 +7,10 @@ router.get('/', (req, res) => {
 });
 
 router.use('/', require('./swagger.js'));
-router.use('/artists', require('./artists'))
-router.use('/showtimes', require('./showtimes'))
-router.use('/artworks', require('./artworks'))
-router.use('/metrics', require('./metrics'))
-router.use('/', home.displayHome)
+router.use('/artists', require('./artists'));
+router.use('/showtimes', require('./showtimes'));
+router.use('/artworks', require('./artworks'));
+router.use('/metrics', require('./metrics'));
+router.use('/', home.displayHome);
 
 module.exports = router;
