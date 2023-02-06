@@ -7,20 +7,14 @@ const artworks = require('../controllers/artworks');
 router.get('/', artworks.getDB);
 
 // CREATE NEW ARTWORK
-router.post('/', (req, res) => {
-    res.send('Hey, this is the artworks.js POST route');
-});
+router.post('/', artworks.createArtwork);
 
 // GET, PUT, DELETE BY ID ROUTES
-router.route('/:id')
-.get((req, res) => {
-    res.send('Hey, this is the artworks.js GET BY ID route');
-})
-.put((req, res) => {
-    res.send('Hey, this is the artworks.js PUT route');
-})
-.delete((req, res) => {
-    res.send('Hey, this is the artworks.js DELETE route');
-})
+router.get('/:id', artworks.getArtwork);
+
+router.put('/:id', artworks.updateArtwork);
+
+router.delete('/:id', artworks.deleteArtwork);
+
 
 module.exports = router;
