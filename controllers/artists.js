@@ -53,16 +53,16 @@ const userId = new ObjId(req.params.id);
 
 const createDoc = async (req, res) => {
     try{
+      const Artist = {firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      overallGenre: req.body.overallGenre,
+      showing: req.body.showing,
+      metrics: req.body.metrics
+    }
         const result = await mongodb
         .getDatabase()
         .db('artistarchive')
-        .collection('artists').insertOne(
-            {firstName: 'Artist Name',
-            lastName: 'Last Name',
-            overallGenre: 'Genre',
-            showing: '',
-            metrics: ''}
-        );
+        .collection('artists').insertOne(Artist);
         res.status(201).json(result);   
       } catch (err){
         res.status(400).json({ message: err.message });
