@@ -20,11 +20,12 @@ const getDB  = async (req, res) => {
 };
 
 const getArtwork = async (req, res) => {
-  try {
+  
     if (!ObjectId.isValid(req.params.id)) {
       res.status(400).json('Invalid artwork ID.');
     }
     const id = new ObjectId(req.params.id);
+    try {
     const oneDB = await mongodb.getDatabase().db('artistarchive').collection('artworks').find({ _id: id});
     oneDB.toArray.then((dbs) => {
       if (dbs){

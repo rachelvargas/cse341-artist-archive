@@ -21,11 +21,12 @@ const getDB  = async (req, res) => {
 };
 
 const getShowtime = async (req, res) => {
-  try {
+  
     if (!ObjectId.isValid(req.params.id)) {
       res.status(400).json('Invalid showtime ID.');
     }
     const id = new ObjectId(req.params.id);
+    try {
     const oneDB = await mongodb.getDatabase().db('artistarchive').collection('showtimes').find({ _id: id});
     oneDB.toArray.then((dbs) => {
       if (dbs){
