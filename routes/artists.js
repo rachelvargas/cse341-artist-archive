@@ -7,11 +7,11 @@ const artists = require('../controllers/artists');
 router.get('/', artists.getData);
 
 // CREATE NEW ARTIST
-router.post('/', artists.createDoc);
+router.post('/', artists.createArtist);
 
 // GET, PUT, DELETE BY ID ROUTES
 router.route('/:id')
-.get(artists.getDocById)
+.get(artists.getArtistById)
 .put((req, res) => {
     res.send('Hey, this is the artists.js PUT route');
 })

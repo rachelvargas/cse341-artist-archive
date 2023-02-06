@@ -25,7 +25,7 @@ const getData = async (req, res) => {
 }
 };
 
-const getDocById = async (req, res) => {
+const getArtistById = async (req, res) => {
   if (!ObjId.isValid(req.params.id)) {
     res.status(400).json('Must use a valid project id to find a project.');
 }
@@ -50,26 +50,31 @@ const userId = new ObjId(req.params.id);
 }
 };
 
-const createDoc = async (req, res) => {
-    try{
-        const result = await mongodb
-        .getDatabase()
-        .db('artistarchive')
-        .collection('artists').insertOne(
-            {firstName: 'Artist Name',
-            lastName: 'Last Name',
-            overallGenre: 'Genre',
-            showing: '',
-            metrics: ''}
-        );
-        res.status(201).json(result);   
-      } catch (err){
-        res.status(400).json({ message: err.message });
-      }
+const createArtist = async (req, res) => {
+try {
+    const newArtist = {
+    firstName : req.body.firstName,
+    lastName : req.body.lastName,
+    overallGenre : req.body.overallGenre,
+    showing: req.body.showing,
+    metrics : req.body.metrics,
     };
+    const result = await mongodb
+    .getDatabase()
+    .db('artistarchive')
+    .collection('artists')
+    .insertOne(newArtist);
+    res.setHeader('Content-Type', 'application/json');
+    res.status(201).json(result);
+
+} catch (err) {
+    res.status(500).json({ message: err.message });
+}
+    };
+
   
 
 module.exports = {
-    getData, getDocById, createDoc
+    getData, getArtistById, createArtist
     //updateDoc, removeDoc
 };
