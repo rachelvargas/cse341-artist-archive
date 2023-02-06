@@ -28,7 +28,7 @@ const getShowtime = async (req, res) => {
     const id = new ObjectId(req.params.id);
     try {
     const oneDB = await mongodb.getDatabase().db('artistarchive').collection('showtimes').find({ _id: id});
-    oneDB.toArray.then((dbs) => {
+    oneDB.toArray().then((dbs) => {
       if (dbs){
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json(dbs[0]);

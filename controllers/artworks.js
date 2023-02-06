@@ -20,22 +20,19 @@ const getDB  = async (req, res) => {
 };
 
 const getArtwork = async (req, res) => {
-    console.log('started');
     if (!ObjectId.isValid(req.params.id)) {
       res.status(400).json('Invalid artwork ID.');
     }
     const id = new ObjectId(req.params.id);
-    console.log('starting try');
     try {
-    console.log('try started');
     const oneDB = await mongodb.getDatabase().db('artistarchive').collection('artworks').find({ _id: id});
-    console.log('db set');
-    oneDB.toArray.then((dbs) => {
-      console.log('setting up toarray');
+
+    oneDB.toArray().then((dbs) => {
+
       if (dbs){
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json(dbs[0]);
-        console.log('successful');
+
       } else {
         res.status(400).json(oneDB.error || 'An error has occured');
       }
