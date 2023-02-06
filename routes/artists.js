@@ -12,9 +12,7 @@ router.post('/', artists.createArtist);
 // GET, PUT, DELETE BY ID ROUTES
 router.route('/:id')
 .get(artists.getArtistById)
-.put((req, res) => {
-    res.send('Hey, this is the artists.js PUT route');
-})
+.put(artists.updateArtist)
 .delete((req, res) => {
     res.send('Hey, this is the artists.js DELETE route');
 })
