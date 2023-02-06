@@ -31,7 +31,7 @@ const getArtwork = async (req, res) => {
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json(dbs);
       } else {
-        res.status(400).json(allDB.error || 'An error has occured');
+        res.status(400).json(oneDB.error || 'An error has occured');
       }
     });
   } catch (err) {
