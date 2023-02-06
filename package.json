@@ -32,7 +32,6 @@
     "fix": "^0.0.3",
     "mongodb": "^5.0.0",
     "nodemon": "^2.0.20",
-    "npm-check-updates": "^16.6.3",
     "swagger": "^0.0.1"
   },
   "devDependencies": {
