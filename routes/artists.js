@@ -13,8 +13,6 @@ router.post('/', artists.createArtist);
 router.route('/:id')
 .get(artists.getArtistById)
 .put(artists.updateArtist)
-.delete((req, res) => {
-    res.send('Hey, this is the artists.js DELETE route');
-})
+.delete(artists.removeArtist)
 
 module.exports = router;

@@ -99,29 +99,28 @@ const updateArtist = async (req, res) =>{
     }
     };
     
-    // const removeDoc = async (req, res) =>{
-    // if (!ObjId.isValid(req.params.id)) {
-    //     res.status(400).json('Must use a valid contact id to delete a contact.');
-    // }
-    // const userId = ObjId(req.params.id);
+    const removeArtist = async (req, res) =>{
+    if (!ObjId.isValid(req.params.id)) {
+        res.status(400).json('Must use a valid contact id to delete a contact.');
+    }
+    const userId = new ObjId(req.params.id);
     
-    // try{
-    //     const result = await mongodb
-    //     .getDb()
-    //     .db('portfolio')
-    //     .collection('projects').deleteOne({ _id: userId }, true);
-    //     if (result.deletedCount > 0){
-    //     res.status(200).send(); 
-    //     }else {
-    //     res.status(500).json(result.error || 'An error has occured');
-    // }} catch (err){
-    //     res.status(500).json({ message: err.message });
-    // }
-    // };
+    try{
+        const result = await mongodb
+        .getDatabase()
+        .db('artistarchive')
+        .collection('artists').deleteOne({ _id: userId }, true);
+        if (result.deletedCount > 0){
+        res.status(200).send(); 
+        }else {
+        res.status(500).json(result.error || 'An error has occured');
+    }} catch (err){
+        res.status(500).json({ message: err.message });
+    }
+    };
 
   
 
 module.exports = {
-    getData, getArtistById, createArtist, updateArtist
-    //updateDoc, removeDoc
+    getData, getArtistById, createArtist, updateArtist, removeArtist
 };
