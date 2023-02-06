@@ -51,10 +51,38 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "example": "any"
+                },
+                "lastName": {
+                  "example": "any"
+                },
+                "overallGenre": {
+                  "example": "any"
+                },
+                "showing": {
+                  "example": "any"
+                },
+                "metrics": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }
@@ -94,11 +122,38 @@
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "example": "any"
+                },
+                "lastName": {
+                  "example": "any"
+                },
+                "overallGenre": {
+                  "example": "any"
+                },
+                "showing": {
+                  "example": "any"
+                },
+                "metrics": {
+                  "example": "any"
+                }
+              }
+            }
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
@@ -120,6 +175,9 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }
@@ -146,10 +204,38 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [],
+        "parameters":  [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "artist": {
+                  "example": "any"
+                },
+                "artistId": {
+                  "example": "any"
+                },
+                "currentlyShowing": {
+                  "example": "any"
+                },
+                "openingDate": {
+                  "example": "any"
+                },
+                "closingDate": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }
@@ -189,11 +275,38 @@
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "artist": {
+                  "example": "any"
+                },
+                "artistId": {
+                  "example": "any"
+                },
+                "currentlyShowing": {
+                  "example": "any"
+                },
+                "openingDate": {
+                  "example": "any"
+                },
+                "closingDate": {
+                  "example": "any"
+                }
+              }
+            }
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
@@ -215,6 +328,9 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }
@@ -280,8 +396,11 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }
@@ -315,17 +434,56 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
+        "parameters":  [
           {
             "name": "id",
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "pieceName": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "artistId": {
+                  "example": "ObjectId"
+                },
+                "artist": {
+                  "example": "any"
+                },
+                "style": {
+                  "example": "any"
+                },
+                "genre": {
+                  "example": "any"
+                },
+                "showing": {
+                  "example": "any"
+                },
+                "date": {
+                  "example": "any"
+                },
+                "picLink": {
+                  "example": "any"
+                }
+              }
+            }
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
@@ -347,6 +505,9 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }
@@ -373,10 +534,38 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "artist": {
+                  "example": "any"
+                },
+                "artistId": {
+                  "example": "any"
+                },
+                "overallSales": {
+                  "example": "any"
+                },
+                "criticRemarks": {
+                  "example": "any"
+                },
+                "exhibitTurnOut": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }
@@ -416,11 +605,38 @@
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "artist": {
+                  "example": "any"
+                },
+                "artistId": {
+                  "example": "any"
+                },
+                "overallSales": {
+                  "example": "any"
+                },
+                "criticRemarks": {
+                  "example": "any"
+                },
+                "exhibitTurnOut": {
+                  "example": "any"
+                }
+              }
+            }
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
@@ -442,6 +658,9 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }
