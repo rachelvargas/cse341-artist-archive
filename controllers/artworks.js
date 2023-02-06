@@ -26,12 +26,13 @@ const getArtwork = async (req, res) => {
     }
     const id = new ObjectId(req.params.id);
     const oneDB = await mongodb.getDatabase().db('artistarchive').collection('artworks').find({ _id: id});
-    oneDB.toArray((err, dbs) => {
-      if (err) {
-        res.status(400).json({ message: err });
+    oneDB.toArray.then((dbs) => {
+      if (dbs){
+        res.setHeader('Content-Type', 'application/json');
+        res.status(200).json(dbs);
+      } else {
+        res.status(400).json(allDB.error || 'An error has occured');
       }
-      res.setHeader('Content-Type', 'application/json');
-      res.status(200).json(dbs[0]);
     });
   } catch (err) {
     res.status(500).json(err);
