@@ -5,7 +5,7 @@ const doc = {
     title: 'Artist Archive',
     description: 'Team 3 - API project for CSE341'
   },
-  host: 'artist-archive.onrender.com',
+  host: 'art-archive.onrender.com',
   schemes: ['https']
 };
 
