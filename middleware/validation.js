@@ -50,7 +50,29 @@ const saveArtist = (req, res, next) => {
   const saveShowtime = (req, res, next) => {
     const validationRule = {
         artist : 'required|string',
-        artistId : 'required|integer',
+        artistId : 'required|string',
+        currentlyShowing : 'required|string',
+        openingDate: 'required|string',
+        closingDate : 'required|string'
+    };
+    validator(req.body, validationRule, {}, (err, status) => {
+      console.log(status);
+      if (!status) {
+        res.status(412).send({
+          success: false,
+          message: 'Something is wrong with the information supplied',
+          data: err
+        });
+      } else {
+        next();
+      }
+    });
+  };
+
+  const saveMetric = (req, res, next) => {
+    const validationRule = {
+        artist : 'required|string',
+        artistId : 'required|string',
         currentlyShowing : 'required|string',
         openingDate: 'required|string',
         closingDate : 'required|string'
@@ -70,5 +92,5 @@ const saveArtist = (req, res, next) => {
   };
 
 module.exports = {
-  saveArt, saveArtist, saveShowtime
+  saveArt, saveArtist, saveShowtime, saveMetric
 };
