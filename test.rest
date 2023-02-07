@@ -1,0 +1,16 @@
+POST http://localhost:3000/artists HTTP/1.1
+content-type: application/json
+
+  {
+    "firstName": "Leonardo",
+    "lastName": "Da Vinci",
+    "overallGenre": "Renaissance",
+    "showing": "True",
+    "metrics": "5"
+  }
+
+###
+
+POST http://localhost:8080/showtimes HTTP/1.1
+content-type: application/json
+  

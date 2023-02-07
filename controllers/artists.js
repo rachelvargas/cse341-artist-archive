@@ -53,7 +53,8 @@ const userId = new ObjId(req.params.id);
 
 const createDoc = async (req, res) => {
     try{
-      const Artist = {firstName: req.body.firstName,
+      const Artist = {
+      firstName: req.body.firstName,
       lastName: req.body.lastName,
       overallGenre: req.body.overallGenre,
       showing: req.body.showing,
