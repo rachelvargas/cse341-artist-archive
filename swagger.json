@@ -164,7 +164,32 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "artist": {
+                  "example": "any"
+                },
+                "artistId": {
+                  "example": "any"
+                },
+                "currentlyShowing": {
+                  "example": "any"
+                },
+                "openingDate": {
+                  "example": "any"
+                },
+                "closingDate": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
