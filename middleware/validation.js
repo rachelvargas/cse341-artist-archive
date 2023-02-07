@@ -5,7 +5,7 @@ const saveArt = (req, res, next) => {
   const validationRule = {
     pieceName : 'required|string',
     description : 'required|string',
-    artistId : 'required|int',
+    artistId : 'required|string',
     artist: 'required|string',
     style : 'required|string',
     genre : 'required|string',
@@ -51,11 +51,12 @@ const saveArtist = (req, res, next) => {
     const validationRule = {
         artist : 'required|string',
         artistId : 'required|integer',
-        currentlyShowing : 'required|boolean',
-        openingDate: 'required|date',
-        closingDate : 'required|date'
+        currentlyShowing : 'required|string',
+        openingDate: 'required|string',
+        closingDate : 'required|string'
     };
     validator(req.body, validationRule, {}, (err, status) => {
+      console.log(status);
       if (!status) {
         res.status(412).send({
           success: false,

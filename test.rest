@@ -11,6 +11,14 @@ content-type: application/json
 
 ###
 
-POST http://localhost:8080/showtimes HTTP/1.1
+POST http://localhost:3000/showtimes HTTP/1.1
 content-type: application/json
+
+ {
+    "artist": "Pablo Picasso",
+    "artistId": "63da55bc0f1733e8520a26d1",
+    "currentlyShowing": false,
+    "openingDate": "",
+    "closingDate": ""
+  }
   
