@@ -11,13 +11,13 @@ const { requiresAuth } = require('express-openid-connect');
 router.get('/', artists.getData);
 
 // CREATE NEW ARTIST
-router.post('/', validate.saveArtist, artists.createArtist);
-router.post('/', requiresAuth(), artists.createArtist);
+
+router.post('/', [requiresAuth(), validate.saveArtist], artists.createArtist);
 
 // GET, PUT, DELETE BY ID ROUTES
 router.route('/:id')
 .get(artists.getArtistById)
-.put(requiresAuth(), artists.updateArtist)
+.put([requiresAuth(), validate.saveArtist], artists.updateArtist)
 .delete(requiresAuth(), artists.removeArtist)
 
 module.exports = router;
