@@ -279,7 +279,44 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "pieceName": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "artistId": {
+                  "example": "ObjectId"
+                },
+                "artist": {
+                  "example": "any"
+                },
+                "style": {
+                  "example": "any"
+                },
+                "genre": {
+                  "example": "any"
+                },
+                "showing": {
+                  "example": "any"
+                },
+                "date": {
+                  "example": "any"
+                },
+                "picLink": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -369,7 +406,32 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "artist": {
+                  "example": "any"
+                },
+                "artistId": {
+                  "example": "any"
+                },
+                "overallSales": {
+                  "example": "any"
+                },
+                "criticRemarks": {
+                  "example": "any"
+                },
+                "exhibitTurnOut": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
