@@ -4,6 +4,7 @@ const ObjectId = require('mongodb').ObjectId;
 //const {validationResult} = require('express-validator');
 
 
+
 const getMetrics = async (req, res, next) => {
   try {
   const result = await mongodb
@@ -56,7 +57,6 @@ if (!errors.isEmpty()){
     overallSales: req.body.overallSales,
     criticRemarks: req.body.criticRemarks,
     exhibitTurnOut: req.body.exhibitTurnOut
-   
 
   };
   const response = await mongodb

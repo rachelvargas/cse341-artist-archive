@@ -2,6 +2,7 @@
 const express = require('express');
 const router = express.Router();
 const metricsController = require('../controllers/metrics');
+const validate = require('../middleware/validation')
 
 //const  { metricsValidation }  = require('./helpers/validation.js');
 
@@ -17,9 +18,7 @@ router.get('/', (metricsController, getMetrics) => {
 
 
 // CREATE NEW METRIC
-router.post('/', (metricsController, newMetric ) => {
-    res.send('Hey, this is the metrics.js POST route');
-})
+router.post('/', [requiresAuth(), validate.saveMetric], metricsController.newMetric);
 
 //router.post('/', metricsController.newMetric);
 
@@ -33,9 +32,7 @@ router.route('/:id')
 //router.get('/:id', metricsController.getOne);
 
 
-.put((metricsController, updateMetric) => {
-    res.send('Hey, this is the metrics.js PUT route');
-})
+.put([requiresAuth(), validate.saveMetric], metricsController.updateMetric)
 
 //router.put('/', metricsController.updateMetric);
 
