@@ -2,12 +2,13 @@
 const express = require('express');
 const router = express.Router();
 const artists = require('../controllers/artists');
+const validate = require('../middleware/validation')
 
 // GET ALL ARTISTS
 router.get('/', artists.getData);
 
 // CREATE NEW ARTIST
-router.post('/', artists.createDoc);
+router.post('/', validate.saveArtist, artists.createDoc);
 
 // GET, PUT, DELETE BY ID ROUTES
 router.route('/:id')

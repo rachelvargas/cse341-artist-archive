@@ -13,7 +13,7 @@ router.post('/', validate.saveShowtime, showtimes.createShowtime);
 // GET, PUT, DELETE BY ID ROUTES
 router.get('/:id', showtimes.getShowtime);
 
-router.put('/:id', showtimes.updateShowtime);
+router.put('/:id', validate.saveShowtime, showtimes.updateShowtime);
 
 router.delete('/:id', showtimes.deleteShowtime);
 
