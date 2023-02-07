@@ -2,9 +2,9 @@ const express = require('express');
 const router = express.Router();
 const home = require('../controllers');
 
-router.get('/', (req, res) => {
-    res.send('Hey, this is the index.js route');
-});
+// router.get('/', (req, res) => {
+//     res.send('Hey, this is the index.js route');
+// });
 
 router.use('/', require('./swagger.js'));
 router.use('/artists', require('./artists'))

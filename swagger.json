@@ -2,10 +2,10 @@
   "swagger": "2.0",
   "info": {
     "title": "Artist Archive",
-    "description": "Team 3 - API project for CSE341",
+    "description": "Team 3 - API project for CSE341 | <a href='/'>Home</a>",
     "version": "1.0.0"
   },
-  "host": "valid-art.onrender.com",
+  "host": "artist-archive.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
@@ -45,7 +45,7 @@
         }
       },
       "post": {
-        "description": "Create a new Artis in the system",
+        "description": "Create a new Artist in the database",
         "tags": ["Artists"],
         "summary": "Create a new Artist",
         "produces": [
