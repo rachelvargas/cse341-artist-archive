@@ -50,7 +50,7 @@ const saveArtist = (req, res, next) => {
   const saveShowtime = (req, res, next) => {
     const validationRule = {
         artist : 'required|string',
-        artistId : 'required|integer',
+        artistId : 'required|string',
         currentlyShowing : 'required|boolean',
         openingDate: 'required|string',
         closingDate : 'required|string'
