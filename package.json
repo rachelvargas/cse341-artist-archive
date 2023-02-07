@@ -31,7 +31,8 @@
     "mongodb": "^5.0.0",
     "nodemon": "^2.0.20",
     "npm-check-updates": "^16.6.3",
-    "swagger": "^0.0.1"
+    "swagger": "^0.0.1",
+    "validatorjs": "^3.22.1"
   },
   "devDependencies": {
     "swagger-autogen": "^2.23.0",
