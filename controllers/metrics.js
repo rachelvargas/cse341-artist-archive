@@ -7,7 +7,7 @@ const ObjectId = require('mongodb').ObjectId;
 const getMetrics = async (req, res, next) => {
   try {
   const result = await mongodb
-  .getDb()
+  .getDatabase()
   .db("artistarchive")
   .collection('metrics')
   .find();
@@ -27,7 +27,7 @@ const getOne = async(req, res, next) => {
     const metricId = new ObjectId(req.params.id);
     console.log(metricId);
     const result = await mongodb 
-    .getDb()
+    .getDatabase()
     .db("artistarchive")
     .collection('metrics')
     .find({_id: metricId});
@@ -60,7 +60,7 @@ if (!errors.isEmpty()){
 
   };
   const response = await mongodb
-  .getDb()
+  .getDatabase()
   .db("artistarchive")
   .collection('metrics')
   .insertOne(movie);
@@ -96,7 +96,7 @@ const updateMetric = async(error, req, res) => {
 
   };
   const response = await mongodb
-  .getDb()
+  .getDatabase()
   .db("artistarchive")
   .collection('metrics')
   .replaceOne({_id: metricId}, metric);
@@ -116,7 +116,7 @@ const deleteMetric = async(error, req, res) => {
   try {
   const metricId = new ObjectId(req.params.id);
   const response = await mongodb 
-  .getDb()
+  .getDatabase()
   .db("artistarchive")
   .collection('metrics')
   .deleteOne({_id: metricId}, true); 

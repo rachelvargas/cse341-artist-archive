@@ -30,7 +30,7 @@ router.route('/:id')
     res.send('Hey, this is the metrics.js GET ONE BY ID route');
 })
 
-//router.get('/:id', metricsController.getOne);
+
 
 
 .put((metricsController, updateMetric) => {
