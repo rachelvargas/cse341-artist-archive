@@ -5,6 +5,14 @@
     "description": "Team 3 - API project for CSE341 | <a href='/'>Home</a>",
     "version": "1.0.0"
   },
+  "securityDefinitions": {
+    "oauth": {
+        "type": "oauth2",
+        "authorizationUrl": "http://localhost:3000/api-docs",
+        "flow": "implicit"
+        
+        }
+    },
   "host": "artist-archive.onrender.com",
   "basePath": "/",
   "schemes": [
