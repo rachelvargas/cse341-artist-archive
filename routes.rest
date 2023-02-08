@@ -91,7 +91,7 @@ Content-Type: application/json
 
 }
 
-//DELETE an artist by its id
+//DELETE a showtime by its id
 ###
 DELETE http://localhost:3000/showtimes/  HTTP/1.1
 
