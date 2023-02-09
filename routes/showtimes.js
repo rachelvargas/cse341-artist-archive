@@ -18,6 +18,6 @@ router.get('/:id', showtimes.getShowtime);
 
 router.put('/:id', [requiresAuth(), validate.saveShowtime], showtimes.updateShowtime);
 
-router.delete('/:id', showtimes.deleteShowtime);
+router.delete('/:id', requiresAuth(), showtimes.deleteShowtime);
 
 module.exports = router;
