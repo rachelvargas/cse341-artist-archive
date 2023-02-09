@@ -7,7 +7,6 @@ const { requiresAuth } = require('express-openid-connect');
 //const  { metricsValidation }  = require('./helpers/validation.js');
 
 // Auth0
-const { requiresAuth } = require('express-openid-connect');
 
 router.get('/', metricsController.getMetrics);
 router.post('/', requiresAuth(), metricsController.newMetric);
