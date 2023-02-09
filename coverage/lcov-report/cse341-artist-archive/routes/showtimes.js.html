@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for cse341-artist-archive/routes/artists.js</title>
+    <title>Code coverage report for cse341-artist-archive/routes/showtimes.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">cse341-artist-archive/routes</a> artists.js</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">cse341-artist-archive/routes</a> showtimes.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>9/9</span>
+                <span class='fraction'>11/11</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>9/9</span>
+                <span class='fraction'>11/11</span>
             </div>
         
             
@@ -98,36 +98,36 @@
 <span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span></td><td class="text"><pre class="prettyprint lang-js">// Artists Routes
+<span class="cline-any cline-yes">4x</span></td><td class="text"><pre class="prettyprint lang-js">// Showtimes Routes
 const express = require('express');
 const router = express.Router();
-const artists = require('../controllers/artists');
+const showtimes = require('../controllers/showtimes');
 const validate = require('../middleware/validation')
 &nbsp;
 // Auth0
 const { requiresAuth } = require('express-openid-connect');
 &nbsp;
-// GET ALL ARTISTS
-router.get('/', artists.getData);
+// GET ALL ARTWORKS
+router.get('/', showtimes.getDB);
 &nbsp;
-// CREATE NEW ARTIST
-&nbsp;
-router.post('/', [requiresAuth(), validate.saveArtist], artists.createArtist);
+// CREATE NEW ARTWORK
+router.post('/', [requiresAuth(), validate.saveShowtime], showtimes.createShowtime);
 &nbsp;
 // GET, PUT, DELETE BY ID ROUTES
-router.route('/:id')
-.get(artists.getArtistById)
-.put([requiresAuth(), validate.saveArtist], artists.updateArtist)
-.delete(requiresAuth(), artists.removeArtist)
+router.get('/:id', showtimes.getShowtime);
+&nbsp;
+router.put('/:id', [requiresAuth(), validate.saveShowtime], showtimes.updateShowtime);
+&nbsp;
+router.delete('/:id', requiresAuth(), showtimes.deleteShowtime);
 &nbsp;
 module.exports = router;</pre></td></tr></table></pre>
 

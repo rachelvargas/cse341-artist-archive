@@ -10,8 +10,7 @@ const getMetrics = async (req, res) => {
   .getDatabase()
   .db("artistarchive")
   .collection('metrics')
-  .find();
-  console.log(result)  
+  .find(); 
   result.toArray().then((lists) => {
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(lists); 

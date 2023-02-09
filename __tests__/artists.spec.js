@@ -19,7 +19,8 @@ describe('GET, GET by id, POST, PUT, DELETE', () => {
         db = await connection.db('artistarchive');
     });
     afterAll(async() => {
-        await connection.close()
+        await connection.close();
+   
     }),
 
     it('responds to /artists', async () => {
