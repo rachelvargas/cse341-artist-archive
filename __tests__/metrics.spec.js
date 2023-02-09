@@ -23,52 +23,44 @@ describe('GET, GET by id, POST, PUT, DELETE', () => {
 
     }),
 
-    it('responds to /artworks', async () => {
-        const res = await request.get('/artworks');
+    it('responds to /metrics', async () => {
+        const res = await request.get('/metrics');
         expect(res.header['content-type']).toBe('application/json; charset=utf-8');
         expect(res.statusCode).toBe(200)
     }),
 
-    it('responds to /artworks by Id', async () => {
-        const res = await request.get('/artworks/63da565c0f1733e8520a26d2');
+    it('responds to /metrics by Id', async () => {
+        const res = await request.get('/metrics/63da589d0f1733e8520a26d4');
         expect(res.header['content-type']).toBe('application/json; charset=utf-8');
         expect(res.statusCode).toBe(200)
     }),
 
-    it('responds to post /artworks', async () => {
-        const res = await request.post('/artworks').send(    {
-            pieceName : "Post",
-            description: "Test",
-            artistId : "",
-            artist: "",
-            style : "",
-            genre : "",
-            showing : "",
-            date : "",
-            picLink : ""
+    it('responds to post /metrics', async () => {
+        const res = await request.post('/metrics').send(    {
+            artist : "Post",
+            artistId : "Test",
+            overallSales : "",
+            criticRemarks : "",
+            exhibitTurnOut : ""
         });
         expect(res.header['content-type']).toBe('text/plain; charset=utf-8');
         expect(res.statusCode).toBe(302)
     }),
 
-    it('responds to put /artworks by ID ', async () => {
-        const res = await request.put('/artworks/63e12b70eddf95811ec3a40b').send(    {
-            pieceName : "Post",
-            description: "Test",
-            artistId : "updated",
-            artist: "",
-            style : "",
-            genre : "",
-            showing : "",
-            date : "",
-            picLink : ""
+    it('responds to put /metrics by ID ', async () => {
+        const res = await request.put('/metrics/63e4b64f018ccbec0681ba8f').send(    {
+            artist : "Put",
+            artistId : "Test",
+            overallSales : "",
+            criticRemarks : "",
+            exhibitTurnOut : ""
         });
         expect(res.header['content-type']).toBe('text/plain; charset=utf-8');
         expect(res.statusCode).toBe(302)
     }),
 
-    it('responds to delete /artworks', async () => {
-        const res = await request.delete('/artworks/63e12b70eddf95811ec3a40b');
+    it('responds to delete /metrics', async () => {
+        const res = await request.delete('/metrics/63e4b64f018ccbec0681ba8f');
         expect(res.header['content-type']).toBe('text/plain; charset=utf-8');
         expect(res.statusCode).toBe(302)
     })

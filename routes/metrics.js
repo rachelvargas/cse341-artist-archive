@@ -11,7 +11,7 @@ const { requiresAuth } = require('express-openid-connect');
 router.get('/', metricsController.getMetrics);
 router.post('/', requiresAuth(), metricsController.newMetric);
 router.get('/:id', metricsController.getOne);
-router.put('/', requiresAuth(), metricsController.updateMetric);
+router.put('/:id', requiresAuth(), metricsController.updateMetric);
 router.delete('/:id', requiresAuth(), metricsController.deleteMetric);
 
 
