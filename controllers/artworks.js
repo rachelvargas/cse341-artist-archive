@@ -48,7 +48,7 @@ const createArtwork = async (req, res) => {
     const newArtwork = {
       pieceName : req.body.pieceName,
       description : req.body.description,
-      artistId : BSON.ObjectId(req.body.artistId),
+      artistId : ObjectId(req.body.artistId),
       artist: req.body.artist,
       style : req.body.style,
       genre : req.body.genre,
