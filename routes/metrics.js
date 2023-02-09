@@ -6,42 +6,14 @@ const validate = require('../middleware/validation')
 const { requiresAuth } = require('express-openid-connect');
 //const  { metricsValidation }  = require('./helpers/validation.js');
 
+// Auth0
+const { requiresAuth } = require('express-openid-connect');
 
-// GET ALL METRICS
-///router.get('/', metricsController.getMetrics);
-router.get('/', (metricsController, getMetrics) => {
-    res.send('Hey, this is the metrics.js GET route')
-})
-
-//router.get('/', metricsController.getMetrics);
-
-
-
-// CREATE NEW METRIC
-router.post('/', [requiresAuth(), validate.saveMetric], metricsController.newMetric);
-
-//router.post('/', metricsController.newMetric);
-
-
-// GET, PUT, DELETE BY ID ROUTES
-router.route('/:id')
-.get((metricsController, getOne) => {
-    res.send('Hey, this is the metrics.js GET ONE BY ID route');
-})
-
-//router.get('/:id', metricsController.getOne);
-
-
-.put([requiresAuth(), validate.saveMetric], metricsController.updateMetric)
-
-//router.put('/', metricsController.updateMetric);
-
-
-.delete((metricsController, deleteMetric) => {
-    res.send('Hey, this is the metrics.js DELETE route');
-});
-
-//router.delete('/:id', metricController.deleteMetric);
+router.get('/', metricsController.getMetrics);
+router.post('/', requiresAuth(), metricsController.newMetric);
+router.get('/:id', metricsController.getOne);
+router.put('/', requiresAuth(), metricsController.updateMetric);
+router.delete('/:id', requiresAuth(), metricsController.deleteMetric);
 
 
 module.exports = router;
