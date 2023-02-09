@@ -18,7 +18,7 @@ router.get('/:id', artworks.getArtwork);
 
 router.put('/:id', [requiresAuth(), validate.saveArt], artworks.updateArtwork);
 
-router.delete('/:id', artworks.deleteArtwork);
+router.delete('/:id', requiresAuth(), artworks.deleteArtwork);
 
 
 module.exports = router;
