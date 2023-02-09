@@ -4,7 +4,6 @@ const router = express.Router();
 const metricsController = require('../controllers/metrics');
 const validate = require('../middleware/validation')
 const { requiresAuth } = require('express-openid-connect');
-const validate = require('../middleware/validation');
 //const  { metricsValidation }  = require('./helpers/validation.js');
 
 // Auth0
