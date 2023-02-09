@@ -13,7 +13,7 @@
         
         }
     },
-  "host": "artist-archive.onrender.com",
+  "host": "test-artistarch.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
