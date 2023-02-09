@@ -20,55 +20,47 @@ describe('GET, GET by id, POST, PUT, DELETE', () => {
     });
     afterAll(async() => {
         await connection.close();
-
+      
     }),
 
-    it('responds to /artworks', async () => {
-        const res = await request.get('/artworks');
+    it('responds to /showtimes', async () => {
+        const res = await request.get('/showtimes');
         expect(res.header['content-type']).toBe('application/json; charset=utf-8');
         expect(res.statusCode).toBe(200)
     }),
 
-    it('responds to /artworks by Id', async () => {
-        const res = await request.get('/artworks/63da565c0f1733e8520a26d2');
+    it('responds to /showtimes by Id', async () => {
+        const res = await request.get('/showtimes/63da59f90f1733e8520a26d7');
         expect(res.header['content-type']).toBe('application/json; charset=utf-8');
         expect(res.statusCode).toBe(200)
     }),
 
-    it('responds to post /artworks', async () => {
-        const res = await request.post('/artworks').send(    {
-            pieceName : "Post",
-            description: "Test",
-            artistId : "",
-            artist: "",
-            style : "",
-            genre : "",
-            showing : "",
-            date : "",
-            picLink : ""
+    it('responds to post /showtimes', async () => {
+        const res = await request.post('/showtimes').send(    {
+            artist : "Post",
+            artistId : "Test",
+            currentlyShowing : "",
+            openingDate: "",
+            closingDate : ""
         });
         expect(res.header['content-type']).toBe('text/plain; charset=utf-8');
         expect(res.statusCode).toBe(302)
     }),
 
-    it('responds to put /artworks by ID ', async () => {
-        const res = await request.put('/artworks/63e12b70eddf95811ec3a40b').send(    {
-            pieceName : "Post",
-            description: "Test",
-            artistId : "updated",
-            artist: "",
-            style : "",
-            genre : "",
-            showing : "",
-            date : "",
-            picLink : ""
+    it('responds to put /showtimes by ID ', async () => {
+        const res = await request.put('/showtimes/63da59f90f1733e8520a26d7').send(    {
+            artist : "Post",
+            artistId : "Test",
+            currentlyShowing : "",
+            openingDate: "",
+            closingDate : ""
         });
         expect(res.header['content-type']).toBe('text/plain; charset=utf-8');
         expect(res.statusCode).toBe(302)
     }),
 
-    it('responds to delete /artworks', async () => {
-        const res = await request.delete('/artworks/63e12b70eddf95811ec3a40b');
+    it('responds to delete /showtimes', async () => {
+        const res = await request.delete('/showtimes/63e230f875fd2375122216c8');
         expect(res.header['content-type']).toBe('text/plain; charset=utf-8');
         expect(res.statusCode).toBe(302)
     })
