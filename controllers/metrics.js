@@ -114,7 +114,7 @@ const deleteMetric = async( req, res) => {
   if (!ObjectId.isValid(req.params.id)) {
     res.status(400).json('Invalid artwork ID.');
   }
-
+  const metricId = new ObjectId(req.params.id);
   try {
   const response = await mongodb 
   .getDatabase()
