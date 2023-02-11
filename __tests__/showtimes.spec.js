@@ -30,7 +30,7 @@ describe('GET, GET by id, POST, PUT, DELETE', () => {
     }),
 
     it('responds to /showtimes by Id', async () => {
-        const res = await request.get('/showtimes/63da59f90f1733e8520a26d7');
+        const res = await request.get('/showtimes/63e22b52ed8574211c6451ad');
         expect(res.header['content-type']).toBe('application/json; charset=utf-8');
         expect(res.statusCode).toBe(200)
     }),
@@ -48,7 +48,7 @@ describe('GET, GET by id, POST, PUT, DELETE', () => {
     }),
 
     it('responds to put /showtimes by ID ', async () => {
-        const res = await request.put('/showtimes/63da59f90f1733e8520a26d7').send(    {
+        const res = await request.put('/showtimes/63e22b52ed8574211c6451ad').send(    {
             artist : "Post",
             artistId : "Test",
             currentlyShowing : "",
@@ -60,7 +60,7 @@ describe('GET, GET by id, POST, PUT, DELETE', () => {
     }),
 
     it('responds to delete /showtimes', async () => {
-        const res = await request.delete('/showtimes/63e230f875fd2375122216c8');
+        const res = await request.delete('/showtimes/63e22b52ed8574211c6451ad');
         expect(res.header['content-type']).toBe('text/plain; charset=utf-8');
         expect(res.statusCode).toBe(302)
     })

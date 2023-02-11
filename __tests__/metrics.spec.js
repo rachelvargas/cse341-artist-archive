@@ -30,7 +30,7 @@ describe('GET, GET by id, POST, PUT, DELETE', () => {
     }),
 
     it('responds to /metrics by Id', async () => {
-        const res = await request.get('/metrics/63da589d0f1733e8520a26d4');
+        const res = await request.get('/metrics/63e4b64f018ccbec0681ba8f');
         expect(res.header['content-type']).toBe('application/json; charset=utf-8');
         expect(res.statusCode).toBe(200)
     }),

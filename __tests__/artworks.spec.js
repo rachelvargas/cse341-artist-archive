@@ -52,7 +52,7 @@ describe('GET, GET by id, POST, PUT, DELETE', () => {
     }),
 
     it('responds to put /artworks by ID ', async () => {
-        const res = await request.put('/artworks/63e12b70eddf95811ec3a40b').send(    {
+        const res = await request.put('/artworks/63da565c0f1733e8520a26d2').send(    {
             pieceName : "Post",
             description: "Test",
             artistId : "updated",
@@ -68,7 +68,7 @@ describe('GET, GET by id, POST, PUT, DELETE', () => {
     }),
 
     it('responds to delete /artworks', async () => {
-        const res = await request.delete('/artworks/63e12b70eddf95811ec3a40b');
+        const res = await request.delete('/artworks/63da565c0f1733e8520a26d2');
         expect(res.header['content-type']).toBe('text/plain; charset=utf-8');
         expect(res.statusCode).toBe(302)
     })
