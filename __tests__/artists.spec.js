@@ -30,7 +30,7 @@ describe('GET, GET by id, POST, PUT, DELETE', () => {
     }),
 
     it('responds to /artists by Id', async () => {
-        const res = await request.get('/artists/63e138bd369607795d44b14b');
+        const res = await request.get('/artists/63da55bc0f1733e8520a26d1');
         expect(res.header['content-type']).toBe('application/json; charset=utf-8');
         expect(res.statusCode).toBe(200)
     }),
@@ -48,7 +48,7 @@ describe('GET, GET by id, POST, PUT, DELETE', () => {
     }),
 
     it('responds to put /artists by ID ', async () => {
-        const res = await request.put('/artists/63e138bd369607795d44b14b').send(    {
+        const res = await request.put('/artists/63da55bc0f1733e8520a26d1').send(    {
             firstName: "Test",
             lastName: "User",
             overallGenre: "updated",
@@ -60,7 +60,7 @@ describe('GET, GET by id, POST, PUT, DELETE', () => {
     }),
 
     it('responds to delete /artists', async () => {
-        const res = await request.delete('/artists/63e3a5af0e1cf439d108b569');
+        const res = await request.delete('/artists/63da55bc0f1733e8520a26d1');
         expect(res.header['content-type']).toBe('text/plain; charset=utf-8');
         expect(res.statusCode).toBe(302)
     })
