@@ -40,7 +40,7 @@ conDB.connectDB();
 
 
 if (process.env.NODE_ENV !== 'test') { app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
+    console.log(`Artist Archive API app listening on port ${port}`)
 });}
 
 module.exports = app;
